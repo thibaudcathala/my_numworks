@@ -31,6 +31,7 @@ public class screen : MonoBehaviour
             string filename = Path.GetFileNameWithoutExtension(file);
             GameObject new_obj = new GameObject(filename);
             new_obj.AddComponent(Type.GetType(filename));
+            new_obj.transform.SetParent(GameObject.Find("Programs").transform);
         }
     }
 
