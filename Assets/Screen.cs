@@ -3,10 +3,16 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using System.IO;
+using KandinskyModule;
 
 public class screen : MonoBehaviour
 {
     public Texture2D screen_texture;
+
+    void ini_kandinsky_class()
+    {
+        Kandinsky.render_texture = screen_texture;
+    }
 
     void clear_screen()
     {
@@ -37,7 +43,10 @@ public class screen : MonoBehaviour
 
     void Start()
     {
+        Application.targetFrameRate = 60;
+
         screen_texture = GetComponent<SpriteRenderer>().sprite.texture;
+        ini_kandinsky_class();
         clear_screen();
         load_all_script();
     }
