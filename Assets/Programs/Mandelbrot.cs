@@ -8,64 +8,31 @@ using System.Numerics;
 
 public class Mandelbrot : MonoBehaviour
 {
-    int N_iteration = 1000;
-    int x = 0;
-    int y = 0;
-
-    Color compute_mandelbrot()
+    IEnumerator mandelbrot(int N_iteration)
     {
-        Complex z = Math.complex(0, 0);
-        Complex c = Math.complex(3.5 * x / 319 - 2.5, -2.5 * y / 221 + 1.25);
-        int i = 0;
-
-        while ((i < N_iteration) && z.Magnitude < 2)
+        for (int x = 0; x < Kandinsky.render_texture.width; ++x)
         {
-            ++i;
-            z = z * z + c;
-        }
-        int rgb = 255 * i / N_iteration;
-        return Kandinsky.color(rgb, (int)(rgb * 0.75), (int)(rgb * 0.25));
-    }
-
-    void display_mandelbrot()
-    {
-        Kandinsky.set_pixel(x, y, compute_mandelbrot());
-    }
-
-    private bool shouldContinue = true;
-
-    private IEnumerator MyCoroutine()
-    {
-        // Do some initial work
-
-        while (shouldContinue)
-        {
-            // Perform some work
-            
-            for (int i = 0; i < Kandinsky.render_texture.width; ++i)
+            for (int y = 0; y < Kandinsky.render_texture.height; ++y)
             {
-                for (int j = 0; j < Kandinsky.render_texture.height; ++j)
+                Complex z = Math.complex(0, 0);
+                Complex c = Math.complex(3.5 * x / 319 - 2.5, -2.5 * y / 221 + 1.25);
+                int i = 0;
+
+                while ((i < N_iteration) && z.Magnitude < 2)
                 {
-                    Kandinsky.set_pixel(i, j, Color.red);
+                    ++i;
+                    z = z * z + c;
                 }
-                yield return null;
+                int rgb = 255 * i / N_iteration;
+                Color col = Kandinsky.color(rgb, (int)(rgb * 0.75), (int)(rgb * 0.25));
+                Kandinsky.set_pixel(x, y, col);
             }
-            // Yield to render a frame and continue in the next frame
+            yield return null;
         }
-        // Execution continues here after the coroutine is stopped
     }
 
-    private void Start()
+    void Start()
     {
-        StartCoroutine(MyCoroutine());
-    }
-
-    void Update()
-    {
-        //        std.for_each_pixel(ref x, ref y, 100, display_mandelbrot);
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            shouldContinue = false;
-        }
+        StartCoroutine(mandelbrot(10));
     }
 }

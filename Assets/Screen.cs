@@ -4,10 +4,13 @@ using Unity.VisualScripting;
 using UnityEngine;
 using System.IO;
 using KandinskyModule;
+using UnityEngine.UI;
 
 public class screen : MonoBehaviour
 {
-    public Texture2D screen_texture;
+    private Texture2D screen_texture;
+    public GameObject program_list_obj;
+    public GameObject button_prefab;
 
     void ini_kandinsky_class()
     {
@@ -26,6 +29,17 @@ public class screen : MonoBehaviour
         screen_texture.Apply();
     }
 
+    void create_program_button(string program_name)
+    {
+        GameObject new_program_button = Instantiate(button_prefab, program_list_obj.transform);
+        Text buttonText = new_program_button.GetComponentInChildren<Text>();
+        if (buttonText != null)
+        {
+            // Change the text of the button
+            buttonText.text = program_name;
+        }
+    }
+
     void load_all_script()
     {
         string cwd = Directory.GetCurrentDirectory();
@@ -36,8 +50,12 @@ public class screen : MonoBehaviour
         {
             string filename = Path.GetFileNameWithoutExtension(file);
             GameObject new_obj = new GameObject(filename);
-            new_obj.AddComponent(Type.GetType(filename));
             new_obj.transform.SetParent(GameObject.Find("Programs").transform);
+            //  new_obj.AddComponent(Type.GetType(filename));
+            if (filename != null)
+            {
+                create_program_button(filename);
+            }
         }
     }
 
