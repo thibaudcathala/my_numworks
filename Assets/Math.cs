@@ -6,7 +6,7 @@ using System.Numerics;
 
 namespace MathModule
 {
-    public class Math : MonoBehaviour
+    public class math : MonoBehaviour
     {
         public static double abs(double x)
         {

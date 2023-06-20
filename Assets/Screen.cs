@@ -11,10 +11,11 @@ public class screen : MonoBehaviour
     private Texture2D screen_texture;
     public GameObject program_list_obj;
     public GameObject button_prefab;
+    public Font text_font;
 
     void ini_kandinsky_class()
     {
-        Kandinsky.render_texture = screen_texture;
+        kandinsky.render_texture = screen_texture;
     }
 
     void clear_screen()
@@ -29,14 +30,29 @@ public class screen : MonoBehaviour
         screen_texture.Apply();
     }
 
+    void launch_program(string program_name)
+    {
+        GameObject obj = GameObject.Find("Programs");
+        if (obj != null)
+        {
+            obj.AddComponent(Type.GetType(program_name));
+        }
+        GameObject.Find("Menu").SetActive(false);
+    }
+
     void create_program_button(string program_name)
     {
         GameObject new_program_button = Instantiate(button_prefab, program_list_obj.transform);
-        Text buttonText = new_program_button.GetComponentInChildren<Text>();
-        if (buttonText != null)
+        Button program_button = new_program_button.GetComponent<Button>();
+        Text button_text = new_program_button.GetComponentInChildren<Text>();
+
+        program_button.onClick.AddListener(() => launch_program(program_name));
+        if (button_text != null)
         {
-            // Change the text of the button
-            buttonText.text = program_name;
+            button_text.text = program_name;
+            button_text.font = text_font;
+            button_text.fontStyle = FontStyle.Bold;
+            button_text.fontSize = 17;
         }
     }
 
@@ -51,11 +67,7 @@ public class screen : MonoBehaviour
             string filename = Path.GetFileNameWithoutExtension(file);
             GameObject new_obj = new GameObject(filename);
             new_obj.transform.SetParent(GameObject.Find("Programs").transform);
-            //  new_obj.AddComponent(Type.GetType(filename));
-            if (filename != null)
-            {
-                create_program_button(filename);
-            }
+            create_program_button(filename);
         }
     }
 
