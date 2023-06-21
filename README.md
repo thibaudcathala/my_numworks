@@ -47,17 +47,17 @@ IEnumerator main_func()
 ```cs
 yield return null;
 ```
--> pause the program and continue in the next frame
+To pause the program and continue in the next frame
     - 
 ```cs
 yield return new WaitForSeconds(2f);
 ```
- -> pause the program for 2 seconds
+ To pause the program for 2 seconds
     -
 ```cs
 yield break;
 ```
- -> completly end the program
+ To completly end the program
 
 take a look at the default program included in the progect to see how to use the in real case
 
