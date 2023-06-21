@@ -14,7 +14,7 @@ Now that you have launch the project you can :
 
 ![image](https://github.com/thibaudcathala/my_numworks/assets/114906947/18e954f7-405c-4fc7-b2a7-ac6c9b24dc71)
 
-  - create a new script in the "**Programs**" folder and code your own program that you can execute by launching the emmulator and selecting your program in the menu
+  - create a new script in the "**Programs**" folder and code your own program that you can execute by launching the emulator and selecting your program in the menu
 
 ![image](https://github.com/thibaudcathala/my_numworks/assets/114906947/e2915313-7059-4a44-b66e-3d1538aedd25)
 
