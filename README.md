@@ -12,18 +12,18 @@ The resolution screen of the numworks is 320x222
 Now that you have launch the project you can :
   - launch the emulator and execute a example program
 
-![image](https://github.com/thibaudcathala/my_numworks/assets/114906947/18e954f7-405c-4fc7-b2a7-ac6c9b24dc71)
+  ![image](https://github.com/thibaudcathala/my_numworks/assets/114906947/18e954f7-405c-4fc7-b2a7-ac6c9b24dc71)
 
   - create a new script in the "**Programs**" folder and code your own program that you can execute by launching the emulator and selecting your program in the menu
 
-![image](https://github.com/thibaudcathala/my_numworks/assets/114906947/e2915313-7059-4a44-b66e-3d1538aedd25)
+  ![image](https://github.com/thibaudcathala/my_numworks/assets/114906947/e2915313-7059-4a44-b66e-3d1538aedd25)
 
 ## How to create a simple program
 
 - create a new .cs script
 - remove the default content of the public class of your script :
 
-![image](https://github.com/thibaudcathala/my_numworks/assets/114906947/1834193d-d951-4a67-922c-18de744fc31a)
+  ![image](https://github.com/thibaudcathala/my_numworks/assets/114906947/1834193d-d951-4a67-922c-18de744fc31a)
 
 - now that you have and empty program copy past this code snippets in your program :
 
@@ -70,11 +70,11 @@ take a look at the default program included in the progect to see how to use the
 
 - to import those module you have to simply put those line at the top of your program :
 
-![image](https://github.com/thibaudcathala/my_numworks/assets/114906947/7925e01a-041b-4b85-b20e-35f848fcf621)
+  ![image](https://github.com/thibaudcathala/my_numworks/assets/114906947/7925e01a-041b-4b85-b20e-35f848fcf621)
 
 - and then use modules :
 
-![image](https://github.com/thibaudcathala/my_numworks/assets/114906947/7f046566-328b-4dc2-9324-16632e0a77e4)
+  ![image](https://github.com/thibaudcathala/my_numworks/assets/114906947/7f046566-328b-4dc2-9324-16632e0a77e4)
 
 ## Example program
 
