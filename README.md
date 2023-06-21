@@ -7,7 +7,7 @@ The screen resolution of the numworks is 320x222 pixels.
 1. clone the repository
 2. launch the unity project
 
-![image](https://github.com/thibaudcathala/my_numworks/assets/114906947/917006e5-b2c5-4753-9b1d-2cbad67eb8a5)
+![image](https://github.com/thibaudcathala/my_numworks/assets/114906947/529cce57-08e8-4fc0-b7f4-0c921fc5c719)
 
 3. Now that you have launch the project you can :
   - launch the emulator and execute a example program
