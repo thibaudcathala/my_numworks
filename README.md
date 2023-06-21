@@ -1,6 +1,6 @@
 # my_numworks - NumWorks Emulator on Unity
 Numworks is a graphical calculator where you can write python like program to create graphical experience only by modiffing the color of the pixel of the screen and getting the color of a pixel.
-The resolution screen of the numworks is 320x222
+The screen resolution of the numworks is 320x222 pixels.
 
 ## How to use
 
