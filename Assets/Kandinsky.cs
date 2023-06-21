@@ -9,6 +9,16 @@ namespace KandinskyModule
     {
         public static Texture2D render_texture;
 
+        public static Vector2 get_center_screen()
+        {
+            return new Vector2(render_texture.width / 2f, render_texture.height / 2f);
+        }
+
+        public static float flip_y(float y)
+        {
+            return render_texture.height - y;
+        }
+
         public static Color get_pixel(int x, int y)
         {
             return render_texture.GetPixel(x, render_texture.height - (y + 1));
@@ -74,6 +84,18 @@ namespace KandinskyModule
 
                 render_texture.SetPixel(Mathf.RoundToInt(x), render_texture.height - (Mathf.RoundToInt(y) + 1), color);
             }
+            render_texture.Apply();
+        }
+
+        public static void clear_screen()
+        {
+            Color32[] pixels = render_texture.GetPixels32();
+
+            for (int i = 0; i < pixels.Length; ++i)
+            {
+                pixels[i] = Color.white;
+            }
+            render_texture.SetPixels32(pixels);
             render_texture.Apply();
         }
     }
