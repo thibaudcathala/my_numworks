@@ -43,9 +43,12 @@ IEnumerator main_func()
 - you can now code in the "main_func" that you can rename if you want
 - the lane "yield return null;" is there to control the flow of the program
 - you can use :
-    - ```cs yield return null;``` -> pause the program and continue in the next frame
-    - ```cs yield return new WaitForSeconds(2f);``` -> pause the program for 2 seconds
-    - ```cs yield break;``` -> completly end the program
+    - ```cs
+yield return null;``` -> pause the program and continue in the next frame
+    - ```cs
+yield return new WaitForSeconds(2f);``` -> pause the program for 2 seconds
+    - ```cs
+yield break;``` -> completly end the program
 
 take a look at the default program included in the progect to see how to use the in real case
 
