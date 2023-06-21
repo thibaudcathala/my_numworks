@@ -80,12 +80,14 @@ take a look at the default program included in the progect to see how to use the
 
 There is 2 example program for now
 
-- Mandelbrot
+### Mandelbrot
+
 This is a program that draw the mandelbrot fractal
 
 ![image](https://github.com/thibaudcathala/my_numworks/assets/114906947/c4e398ad-8bd7-4889-af9d-947e2ec80fed)
 
-- Clock
+### Clock
+
 This is program that draw a clock showing the current hour, minute and seconde
 
 ![image](https://github.com/thibaudcathala/my_numworks/assets/114906947/973d424c-090c-44d6-9898-afdc83ba5e78)
