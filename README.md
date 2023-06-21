@@ -4,12 +4,12 @@ The resolution screen of the numworks is 320x222
 
 ## How to use
 
-- clone the repository
-- launch the unity project
+1. clone the repository
+2. launch the unity project
 
 ![image](https://github.com/thibaudcathala/my_numworks/assets/114906947/917006e5-b2c5-4753-9b1d-2cbad67eb8a5)
 
-Now that you have launch the project you can :
+3. Now that you have launch the project you can :
   - launch the emulator and execute a example program
 
   ![image](https://github.com/thibaudcathala/my_numworks/assets/114906947/18e954f7-405c-4fc7-b2a7-ac6c9b24dc71)
@@ -18,14 +18,15 @@ Now that you have launch the project you can :
 
   ![image](https://github.com/thibaudcathala/my_numworks/assets/114906947/e2915313-7059-4a44-b66e-3d1538aedd25)
 
+---------
 ## How to create a simple program
 
-- create a new .cs script
-- remove the default content of the public class of your script :
+1. create a new .cs script
+2. remove the default content of the public class of your script :
 
   ![image](https://github.com/thibaudcathala/my_numworks/assets/114906947/1834193d-d951-4a67-922c-18de744fc31a)
 
-- now that you have and empty program copy past this code snippets in your program :
+3. now that you have and empty program copy past this code snippets in your program :
 
 ```cs
 void Start()
@@ -40,8 +41,7 @@ IEnumerator main_func()
 }
 ```
 
-- you can now code in the "main_func" that you can rename if you want
-- the lane "yield return null;" is there to control the flow of the program
+4. you can now code in the "main_func" that you can rename if you want, the line `yield return null;` is there to control the flow of the program
 - You can use :
   -
 ```cs
@@ -61,6 +61,7 @@ To completly end the program
 
 take a look at the default program included in the progect to see how to use the in real case
 
+------
 ## How to use Default Module
 
 - With the emulator is given 3 default module that contain multiple function for different purpose :
@@ -76,6 +77,7 @@ take a look at the default program included in the progect to see how to use the
 
   ![image](https://github.com/thibaudcathala/my_numworks/assets/114906947/7f046566-328b-4dc2-9324-16632e0a77e4)
 
+-------
 ## Example program
 
 There is 2 example program for now
