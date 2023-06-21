@@ -33,6 +33,7 @@ public class screen : MonoBehaviour
     void launch_program(string program_name)
     {
         GameObject obj = GameObject.Find("Programs");
+        Debug.Log(program_name);
         if (obj != null)
         {
             obj.AddComponent(Type.GetType(program_name));

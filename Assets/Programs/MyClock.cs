@@ -4,7 +4,7 @@ using UnityEngine;
 using KandinskyModule;
 using RandomModule;
 
-public class Test : MonoBehaviour
+public class MyClock : MonoBehaviour
 {
     private float size_clock = 75f;
     private Color clock_color = Color.red;

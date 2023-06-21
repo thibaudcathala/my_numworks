@@ -5,7 +5,7 @@ using KandinskyModule;
 using RandomModule;
 using MathModule;
 
-public class MyNewScript : MonoBehaviour
+public class NewScript : MonoBehaviour
 {
     void Start()
     {
