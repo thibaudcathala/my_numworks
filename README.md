@@ -42,7 +42,7 @@ IEnumerator main_func()
 
 - you can now code in the "main_func" that you can rename if you want
 - the lane "yield return null;" is there to control the flow of the program
-- you can use :
+- You can use :
     - 
 ```cs
 yield return null;
